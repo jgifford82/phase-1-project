@@ -5,9 +5,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // console.log(form)
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-        console.log("prevented")
+        console.log("prevented");
+
+        const p = document.createElement("p");
+        // console.log(p);
+        document.getElementById("form").append(p);
+        // console.log(document.getElementById("name").value)
+        const userName = document.getElementById("name").value
+        p.innerText = `Greetings, ${userName}!`
     })
+
 });
 
-// Next: create new element on form Submit, append to the DOM, and change text content to value of form input.
-// Also clear form on submit. 
+// Next: clear form on submit. 
