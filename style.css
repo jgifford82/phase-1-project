@@ -6,6 +6,15 @@ body {
 	color: antiquewhite
 }
 
+#familiar {
+	height: 200px;
+}
+
+img {
+	width: auto;
+	max-height: 100%;
+}
+
 footer.copyright {
 	color: antiquewhite;
 	width: 60%;
