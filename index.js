@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM fully loaded");
     
     const form = document.querySelector('form');
@@ -19,12 +19,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const img = document.querySelector('img');
     // console.log(img)
-    img.addEventListener("mouseover", (event) => {
+    img.addEventListener("mouseover", () => {
         alert("Purrrr");
     });
 
-});
+    const fireBtn = document.getElementById('fire');
+    const fireImg = document.getElementById('fire-image')
+    // console.log(fire);
+    // console.log(fireImg);
+    fireBtn.addEventListener('click', () => {
+        // console.log('fired');
+        fireImg.removeAttribute("hidden");
+        setTimeout( () => {
+            fireImg.setAttribute("hidden", true);
+        }, 2000)
+    });
 
-// Next:Pet your familiar
-// alert should disappear after a few seconds
-// add caption or p element that says "Pet your familiar"
+});
