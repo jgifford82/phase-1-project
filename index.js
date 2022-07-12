@@ -35,4 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000)
     });
 
+    const searchSpellsForm = document.getElementById('search-spells');
+    console.log(searchSpellsForm)
+    searchSpellsForm.addEventListener("submit", (event) => {
+        event.preventDefault()
+        // console.log("prevented this too");
+    });
+
 });
