@@ -35,11 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000)
     });
 
+    function fetchSpells() {
+        return fetch(`https://www.dnd5eapi.co/api/spells/?name=${document.getElementById("search-spells-form").value}`, {
+            method: 'GET'
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+        }
+
     const searchSpellsForm = document.getElementById('search-spells');
-    console.log(searchSpellsForm)
+    // console.log(searchSpellsForm)
     searchSpellsForm.addEventListener("submit", (event) => {
         event.preventDefault()
         // console.log("prevented this too");
+        fetchSpells();
+        document.getElementById("search-spells-form").value = "";
     });
 
 });
