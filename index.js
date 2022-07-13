@@ -35,14 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000)
     });
 
+    // This fetches data from the url based on the Search Spells input value and logs it in the console.
     function fetchSpells() {
         return fetch(`https://www.dnd5eapi.co/api/spells/?name=${document.getElementById("search-spells-form").value}`, {
             method: 'GET'
             })
             .then(response => response.json())
-            .then(data => console.log(data))
-        }
+            .then(response => console.log(response))
+    }
 
+    // When submit button is clicked in the Search Spells section, this is preventing the default page refresh, calls the fetchSpells function, and clears the form. 
     const searchSpellsForm = document.getElementById('search-spells');
     // console.log(searchSpellsForm)
     searchSpellsForm.addEventListener("submit", (event) => {
