@@ -18,6 +18,15 @@ img {
 	max-height: 100%;
 }
 
+#search-spells {
+	background-color: black;
+	height:100px; 
+}
+
+#spells-container {
+	background-color: black;
+}
+
 footer.copyright {
 	color: antiquewhite;
 	/* position:absolute;
