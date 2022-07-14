@@ -35,15 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000)
     });
 
-    // // This fetches data from the url based on the Search Spells input value and logs it in the console. I want to display the fetched data on the web page. 
-    // function fetchSpells() {
-    //     return fetch(`https://www.dnd5eapi.co/api/spells/?name=${document.getElementById("search-spells-form").value}`, {
-    //         method: 'GET'
-    //         })
-    //         .then(response => response.json())
-    //         .then(response => console.log(response.results))
-    // }
-
     // // This console logs an array for each fetch result within the nested array data.results.
     function fetchSpells() {
         return fetch(`https://www.dnd5eapi.co/api/spells/?name=${document.getElementById("search-spells-form").value}`)
@@ -76,8 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
     searchSpellsForm.addEventListener("submit", (event) => {
         event.preventDefault()
         // console.log("prevented this too");
+        
         fetchSpells();
+
         document.getElementById("search-spells-form").value = "";
+        
+        const ul = document.getElementById('spell-name');
+        ul.innerHTML = "";
     });
 
 });
