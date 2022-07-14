@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             h3.innerHTML = obj.name
 
             const a = document.createElement('a')
-            a.innerHTML = obj.url
+            a.innerHTML = `https://www.dnd5eapi.co${obj.url}`
+            a.href = `https://www.dnd5eapi.co${obj.url}`
 
             spellsDiv.append(ul)
             ul.append(h3)
