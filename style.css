@@ -3,7 +3,10 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	color: antiquewhite
+	color: antiquewhite;
+	max-width: 500px;
+	margin: auto;
+	text-align: center;
 }
 
 #familiar {
@@ -17,7 +20,9 @@ img {
 
 footer.copyright {
 	color: antiquewhite;
-	position:absolute;
+	/* position:absolute;
 	bottom:0;
-	height:60px;
+	height:60px; */
+	padding: 20px;
+	text-align: center;
 }
