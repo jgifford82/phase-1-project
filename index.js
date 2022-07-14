@@ -35,14 +35,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000)
     });
 
-    // This fetches data from the url based on the Search Spells input value and logs it in the console.
+    // // This fetches data from the url based on the Search Spells input value and logs it in the console. I want to display the fetched data on the web page. 
+    // function fetchSpells() {
+    //     return fetch(`https://www.dnd5eapi.co/api/spells/?name=${document.getElementById("search-spells-form").value}`, {
+    //         method: 'GET'
+    //         })
+    //         .then(response => response.json())
+    //         .then(response => console.log(response.results))
+    // }
+
+    // // This console logs an array for each fetch result within the nested array data.results.
     function fetchSpells() {
-        return fetch(`https://www.dnd5eapi.co/api/spells/?name=${document.getElementById("search-spells-form").value}`, {
-            method: 'GET'
-            })
-            .then(response => response.json())
-            .then(response => console.log(response))
-    }
+        return fetch(`https://www.dnd5eapi.co/api/spells/?name=${document.getElementById("search-spells-form").value}`)
+          .then(response => response.json())
+          .then(data => data.results.forEach((element) => {
+            console.log(element)
+            let obj = element
+
+            const spellsDiv = document.getElementById('spells-container')
+            // console.log(spellsDiv)
+
+            const ul = document.getElementById('spell-name')
+            // console.log(ul)
+            
+            const h3 = document.createElement('h3')
+            h3.innerHTML = obj.name
+
+            const a = document.createElement('a')
+            a.innerHTML = obj.url
+
+            spellsDiv.append(ul)
+            ul.append(h3)
+            ul.append(a)
+        }))
+      }
 
     // When submit button is clicked in the Search Spells section, this is preventing the default page refresh, calls the fetchSpells function, and clears the form. 
     const searchSpellsForm = document.getElementById('search-spells');
