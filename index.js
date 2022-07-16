@@ -52,13 +52,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const h3 = document.createElement('h3')
             h3.innerHTML = obj.name
 
+            const p = document.createElement('p')
+
             const a = document.createElement('a')
-            a.innerHTML = `https://www.dnd5eapi.co${obj.url}`
+            // a.innerHTML = `https://www.dnd5eapi.co${obj.url}`
             a.href = `https://www.dnd5eapi.co${obj.url}`
 
             spellsDiv.append(ul)
             ul.append(h3)
             ul.append(a)
+            ul.append(p)
+            a.append(h3)  
+
+            fetch(`https://www.dnd5eapi.co${obj.url}`)
+            .then(response => response.json())
+            // .then(data => console.log("more data", data.desc, data.material))
+            .then(data => {
+                console.log(element)
+                p.innerHTML = data.desc
+            })
         }))
         .catch((error) => {
             console.error('Could not retrieve spells', error);
