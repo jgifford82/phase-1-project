@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ul.append(h3)
             ul.append(a)
         }))
+        .catch((error) => {
+            console.error('Could not retrieve spells', error);
+        });
       }
 
     // When submit button is clicked in the Search Spells section, this is preventing the default page refresh, calls the fetchSpells function, and clears the form. 
