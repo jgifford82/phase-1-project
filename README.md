@@ -14,6 +14,8 @@
 ## Free API used: https://www.dnd5eapi.co/api/spells/
 - When users search for a spell, a fetch request pulls data from the API, then displays spell names, descriptions, and spell names are also clickable links that which lead to more spell details. 
 
+- For help on setting up a basic fetch request, refer to my [blog](https://dev.to/jgifford82/how-to-make-a-fetch-request-4hlh).  
+
 ## Project requirements met:
 1. Uses a free API, no key necessary
 2. Runs on a single page
