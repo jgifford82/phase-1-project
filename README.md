@@ -2,7 +2,7 @@
 
 ## What is it?
 - **Magical and fun!**
-- Users can use this application to search for spells using a submit form. The returned data will be a list of spell names and clickable links, which lead to sepll details.
+- Users can use this application to search for spells using a submit form. The returned data will be a list of spell names and descriptions. The spell names are also clickable links that which lead to more spell details.
 
 - Users can submit their name in a form, which will display a personalized greeting.
 
@@ -12,18 +12,18 @@
 
 
 ## Free API used: https://www.dnd5eapi.co/api/spells/
-- When users search for a spell, a fetch request pulls data from the API, then displays spell names and clickable links for each result. 
+- When users search for a spell, a fetch request pulls data from the API, then displays spell names, descriptions, and spell names are also clickable links that which lead to more spell details. 
 
 ## Project requirements met:
 1. Uses a free API, no key necessary
 2. Runs on a single page
 3. At least 3 unique event listeners: 
     - **DOMContentLoaded:** All code is built within the DOM content loaded event listener to ensure everything happens after DOM content is loaded.
-    - **submit:** There are 2 submit forms; one for users to submit their name, which displays a personalized greeting, and another one where they can search for spells.
+    - **submit:** There are 2 submit forms; one for users to submit their name, which displays a personalized greeting, and another one where they can search for spells, which returns spell names and descriptions.
     - **mouseover:** An alert pops up on cat image mouseover. 
     - **click:** When the "fire" button is clicked, an image of fire displays for 2 seconds.
 4. Array iteration to manipulate API data: 
-    - forEach is used to display the API data on the webpage by creating, appending, and adding innerHTML to elements.
+    - forEach is used to display the fetched data on the webpage by creating, appending, and adding innerHTML to elements.
 5. DRY code; no repetitive or redundant code.
 
 ## Image Resource (free): https://www.pexels.com/
