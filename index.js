@@ -1,5 +1,6 @@
+// First event listener is DOMContentLoaded. This allows fast HTML rendering and asynchronous JavaScript. All code is built within the DOM content loaded event listener to ensure everything happens after the DOM content is loaded.
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM fully loaded");
+    // console.log("DOM fully loaded");
     
     const form = document.querySelector('form');
     // console.log(form)
